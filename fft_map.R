@@ -34,3 +34,6 @@ dmp1 <- plot2D.boxes(img.tens = dmp, box.mat = z.mat, box.thick = 0.01, box_inte
 
 #Start the mapping for the FFT over the SiC spots
 map.tens <- fft_2D_map(img.tens = tens, DelX = 1.0, DelY = 1.0, k1st = b.mat, k0 = v0)
+
+#Save the data as .rda
+save(map.tens, file = 'map.tens.rda')
