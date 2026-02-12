@@ -26,3 +26,6 @@ dmp1 <- plot2D.boxes(img.tens = dmp, box.mat = b.mat, box.thick = 0.01, box_inte
 v0 <- c(-35, -35, 35, 35)
 dmp2 <- plot2D.boxes(img.tens = dmp1, box.mat = matrix(data = v0, ncol = 4, byrow = T), box.thick = 0.01, box_intens = 0.3)
 
+#Do the fft_maps
+map.tens3 <- fft_2D_map(img.tens = tens_3, DelX = 1.0, DelY = 1.0, k1st = b.mat, k0 = v0)
+save(map.tens3, file = 'map.tens3.rda')
