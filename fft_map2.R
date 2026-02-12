@@ -46,3 +46,4 @@ dmp1 <- plot2D.boxes(img.tens = dmp.1, box.mat = b.mat, box.thick = 0.001, box_i
 
 #Create the map
 map.tens2 <- fft_2D_map(img.tens = tens_2, DelX = 1.0, DelY = 1.0, k1st = b.mat, k0 = c(-35, -35, 35, 35))
+save(map.tens2, file = 'map.tens2.rda')
